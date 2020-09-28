@@ -152,7 +152,7 @@ public class FileUtils {
 				FileItem fileItem = new FileItem();
 				fileItem.setFileName(file.getCanonicalPath());
 				fileItem.setBase64Content(getFileDataBased64(filePath));
-				fileItem.setMimeType(new MimetypesFileTypeMap().getContentType(file));
+				fileItem.setMimeType(new MimeTypeFile().getContentType(file));
 				
 				ret.add(fileItem);
 			}
