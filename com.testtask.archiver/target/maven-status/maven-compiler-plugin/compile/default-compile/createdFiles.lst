@@ -1,0 +1,4 @@
+com\testtask\archiver\FileUtil.class
+com\testtask\archiver\ZipUtils.class
+com\testtask\archiver\FileItem.class
+com\testtask\archiver\Client.class
