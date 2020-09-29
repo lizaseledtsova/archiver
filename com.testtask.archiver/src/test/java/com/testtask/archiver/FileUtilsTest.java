@@ -8,11 +8,16 @@ import java.io.IOException;
 
 public class FileUtilsTest {
 	
-	private final String FILE_TO_ZIP = "C:\\Users\\liza\\Desktop\\photo_2020-09-22_22-47-54.jpg";
-	private final String FILE_TO_ZIPPED = "C:\\Users\\liza\\Desktop\\ar2.zip";
-	private final String ZIP_FILE = "C:\\Users\\liza\\Desktop\\ar.zip";
+	private final String FILE_TO_ZIP = "src/main/doc/Liza_Seledtsova.text";
+	private final String FILE_TO_ZIPPED ="src/main/doc/ar1.zip";
+	private final String ZIP_FILE = "src/main/doc/ar1.zip";
 	private final String EXTRACT_FOLDER = System.getProperty("user.dir");
-	private final String ARCHIVE_FOLDER = "C:\\Users\\liza\\Desktop";
+	private final String ARCHIVE_FOLDER = System.getProperty("user.dir");
+
+	@Test
+	public void testZipFile() throws IOException {
+		FileUtil.zip(FILE_TO_ZIP, FILE_TO_ZIPPED);
+	}
 
 	@Test
 	public void testExtractFile() throws IOException {
@@ -29,8 +34,6 @@ public class FileUtilsTest {
 		FileUtil.archive(ZIP_FILE, ARCHIVE_FOLDER);
 	}
 
-	//@Test
-	public void testZipFile() throws IOException {
-		FileUtil.zip(FILE_TO_ZIP, FILE_TO_ZIPPED);
-	}
+
+
 }
