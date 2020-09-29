@@ -1,5 +1,6 @@
 package com.testtask.archiver;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -15,21 +16,21 @@ public class FileUtilsTest {
 
 	@Test
 	public void testExtractFile() throws IOException {
-		FileUtils.extract(ZIP_FILE, EXTRACT_FOLDER);
+		FileUtil.extract(ZIP_FILE, EXTRACT_FOLDER);
 	}
 
 	//@Test
 	public void testDeleteFile() throws IOException {
-		FileUtils.delete(ZIP_FILE);
+		FileUtil.delete(ZIP_FILE);
 	}
 	
 	//@Test
 	public void testArchiveFile() throws IOException {
-		FileUtils.archive(ZIP_FILE, ARCHIVE_FOLDER);
+		FileUtil.archive(ZIP_FILE, ARCHIVE_FOLDER);
 	}
 
 	//@Test
 	public void testZipFile() throws IOException {
-		FileUtils.zip(FILE_TO_ZIP, FILE_TO_ZIPPED);
+		FileUtil.zip(FILE_TO_ZIP, FILE_TO_ZIPPED);
 	}
 }
